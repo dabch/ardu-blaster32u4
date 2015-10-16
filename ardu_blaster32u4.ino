@@ -15,8 +15,8 @@ void setup() {
 	Serial.begin(9600);
 	Serial.println("begin");
 
-	DDRB |= _BV(PB5) | _BV(PB6); // set pins 9 (PB5, OC1A) and 10 (PB6, OC1B) to output
-	DDRC |= _BV(PC6); // set pin 5 (PC6, OC3A) to output
+	DDRB |= _BV(1<<5) | _BV(1<<6); // set pins 9 (PB5, OC1A) and 10 (PB6, OC1B) to output
+	DDRC |= _BV(1<<6); // set pin 5 (PC6, OC3A) to output
 	
 	
 	// Timer 1
